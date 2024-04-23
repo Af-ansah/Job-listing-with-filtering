@@ -1,0 +1,7 @@
+.navbar {
+    background-image: url('../../../assets/images/bg-header-desktop.svg');
+    background-color: #5CA5A5;
+    width: 100%;
+    background-size: cover;
+    height: 100px;  
+}
