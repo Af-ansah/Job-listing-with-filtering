@@ -1,0 +1,69 @@
+.filter-card{
+    position: absolute;
+    top: 70%;
+    left: 48%;
+    transform: translateX(-50%);
+    background-color: #FFF;
+    display: flex;
+    align-items: center;
+    border-radius: 3px;
+    font-family: league Spartan, sans-serif;
+    cursor: pointer;
+    width: 81%;
+    height: 60px; 
+    justify-content: space-between;
+    padding: 0 20px;
+    /* display: none; */
+}
+
+.filter-items {
+    display: flex;
+    flex-grow: 1; 
+    align-items: center;
+    overflow-x: auto; 
+}
+.template{
+background-color: #EFFAFA;
+display: flex;
+align-items: center;
+padding-left: 10px;
+margin-right: 14px;
+border-radius: 3px;
+
+}
+.data-text{
+    margin-right: 10px;
+    color: #5CA5A5;
+    flex-grow: 1;
+}
+.image-btn {
+    width: 24px;
+    height: 100%;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    border-radius: 0 3px  3px 0;
+}
+.close-icon {
+    width: 80%; 
+    height: 80%; 
+    display: block;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:#5CA5A5;
+    color: white;
+    border-radius: 0 3px  3px 0;
+}
+.close-icon:hover{
+    background-color: black;
+}
+
+@media (max-width: 768px) {
+    
+    .filter-card {
+        width: 63%;
+    }
+}
