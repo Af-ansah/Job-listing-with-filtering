@@ -1,0 +1,159 @@
+.card-container {
+ 
+    display: flex;
+   justify-content: space-between;  
+    /* align-items: flex-start;  */
+    background-color: white;
+    margin: 4rem 5rem;
+    padding: 20px 50px;
+    /* width: 75%; */
+    height: auto; 
+    border-radius: 6px;
+    font-family: league Spartan, sans-serif;
+    cursor: pointer;
+    /* flex-wrap: wrap; */
+
+}
+
+.job-wrapper {
+    display: flex ;
+    width: 100%;
+    column-gap: 2rem;
+}
+
+.left-part{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-left: 1px;
+    padding: 0;
+}
+
+ img {
+    display: flex;
+    margin-right: 2px;
+    flex-shrink: 0;
+    height: auto;
+
+}
+
+.first-lane, .third-lane {
+    display: flex;
+}
+
+.first-lane p{
+    font-size: 12px;
+    color: #5CA5A5;
+}
+.left-part p {
+    font-weight: bold;
+}
+
+.first-lane button, .third-lane p , .first-lane p {
+    margin: 0.1em; 
+    padding: 1px; 
+}
+
+.third-lane {
+    color: #B7C4C4;
+    font-size: 0.8em;
+    align-items: center;
+    /* justify-content: space-between; */
+}
+
+
+
+.skills {
+    
+    position: relative; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+}
+
+
+ /* .skill-btn {
+    border: none;
+    color: #5CA5A5;
+    border-radius: 3px;
+    cursor: pointer;
+    background-color:  #EFFAFA;
+    margin-right: 0.5rem;
+    font-size: 12px;
+    align-items: center;
+    padding: 10px;
+    font: bold;
+    
+}
+
+.skills .skill-btn:hover {
+    background-color: #5CA5A5;
+    color: #FFF; 
+} */
+
+
+.dot {
+    border-radius: 50%;
+    height: 3px;
+    width: 3px;
+    background-color:#979797;
+    margin: 0 4px;
+    align-self: center;
+
+}
+
+.card-container:hover {
+    border-left:4px solid #5CA5A5;
+}
+
+.bar {
+    height: 2px;
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    background-color: #979797;
+    visibility: hidden;
+}
+
+/* for mobile screen*/
+@media (max-width: 767px) {
+    .card-container {
+      flex-direction: column;
+      margin: 4rem 2rem;
+      padding: 5px 20px;
+      height: 50%;
+    }
+
+    .job-wrapper{
+         flex-direction: column;
+        
+    }
+    
+    .skills {
+        /* margin: rem 1rem; */
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+    
+    }
+  
+    .first-lane, .third-lane {
+        width: 100%;
+    }
+    .left-part {
+        width: 100%;
+    }
+    img {
+         width: 25%;
+         height: 30%; 
+         transform: translate(-3px, -40px);
+         margin-left: 0;
+
+    }
+
+    .bar{
+        visibility: visible;
+    }
+      
+  }

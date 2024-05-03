@@ -1,0 +1,48 @@
+ .tertiary {
+    border: none;
+    color: #5CA5A5;
+    border-radius: 3px;
+    cursor: pointer;
+    background-color:  #EFFAFA;
+    margin-right: 0.5rem;
+    font-size: 12px;
+    align-items: center;
+    padding: 10px;
+    font: bold;   
+}
+
+.tertiary:hover {
+    background-color: #5CA5A5;
+    color: #FFF; 
+} 
+
+
+.primary {
+    background-color: #5CA5A5;
+    
+}
+
+.secondary {
+    background-color: #2B3939;
+}
+
+.primary, .secondary{
+    border: none;
+    margin: 3px;
+    border-radius: 25px;
+    height: 100%;
+    color: #FFF;
+    font-size: 9px;
+    padding: 5px;
+    width: auto; 
+    flex-grow: 0;
+}
+
+.filter {
+    color: #5CA5A5;
+    border: none;
+    font-weight: bold;
+    margin-left: 0;
+    background-color: #FFF;
+    
+}

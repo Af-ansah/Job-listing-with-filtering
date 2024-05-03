@@ -1,0 +1,147 @@
+import { IJob } from "../interfaces/jobs.interface";
+
+ export const jobs: Array<IJob> = [
+
+    { 
+      id: 1,
+      image: '../../../assets/images/photosnap.svg',
+      company: 'Photosnap',
+      new: true,
+      featured: true,
+      position: 'Senior Frontend Developer',
+      postedAt: new Date(2024, 1, 4),
+      contract: 'Full Time',
+      location: 'USA only',
+      role: 'Frontend',
+      level: 'Senior',
+      languages: ['HTML', 'CSS', 'JavaScript']
+    },
+    {
+      id: 2,
+      image: '../../../assets/images/manage.svg',
+      company: 'Manage',
+      new: true,
+      featured: true,
+      position: 'Fullstack Developer',
+      postedAt: new Date(2023, 11, 4),
+      contract: 'Part Time',
+      location: 'Remote',
+      role: 'Fullstack',
+      level: 'Midweight',
+      languages: ['Python', 'React']
+    },
+    { 
+      id: 3,
+      image: '../../../assets/images/account.svg',
+      company: 'Account',
+      new: true,
+      featured: false,
+      position: 'Junior Frontend Developer',
+      postedAt: new Date(2024, 3, 25),
+      contract: 'Part Time',
+      location: 'USA only',
+      role: 'Frontend',
+      level: 'Junior',
+      languages: ['JavaScript', 'React', 'Sass']
+    },
+
+    { 
+      id: 4,
+      image: '../../../assets/images/myhome.svg',
+      company: 'MyHome',
+      new: false,
+      featured: false,
+      position: 'Junior Frontend Developer',
+      postedAt: new Date("2023-10-25"),
+      contract: 'Contract',
+      location: 'USA only',
+      role: 'Frontend',
+      level: 'Junior',
+      languages: ['CSS', 'JavaScript']
+    },
+    { 
+      id: 5,
+      image: '../../../assets/images/loop-studios.svg',
+      company: 'Loop Studios',
+      new: false,
+      featured: false,
+      position: 'Software Engineer',
+      postedAt: new Date(2024, 4, 25),
+      contract: 'Full Time',
+      location: 'Worldwide',
+      role: 'Fullstack',
+      level: 'Midweight',
+      languages: ['JavaScript', 'Ruby', 'Sass']
+    },
+    { 
+      id: 6,
+      image: '../../../assets/images/faceit.svg',
+      company: 'FaceIt',
+      new: false,
+      featured: false,
+      position: 'Junior Backend Developer',
+      postedAt: new Date(2024, 2, 14),
+      contract: 'Full Time',
+      location: 'UK only',
+      role: 'Backend',
+      level: 'Junior',
+      languages: ['Ruby', 'RoR']
+    },
+    { 
+      id: 7,
+      image: '../../../assets/images/shortly.svg',
+      company: 'Shortly',
+      new: false,
+      featured: false,
+      position: 'Junior Developer',
+      postedAt: new Date(2022, 3, 3),
+      contract: 'Full Time',
+      location: 'Worldwide',
+      role: 'Frontend',
+      level: 'Junior',
+      languages: ['HTML', 'JavaScript', 'Sass']
+    },
+    { 
+      id: 8,
+      image: '../../../assets/images/insure.svg',
+      company: 'Insure',
+      new: false,
+      featured: false,
+      position: 'Junior Frontend Developer',
+      postedAt: new Date(2022, 3 ,25),
+      contract: 'Full Time',
+      location: 'USA only',
+      role: 'Frontend',
+      level: 'Junior',
+      languages: ['JavaScript', 'Vue', 'Sass']
+    },
+    { 
+      id: 9,
+      image: '../../../assets/images/eyecam-co.svg',
+      company: 'Eyecam Co.',
+      new: false,
+      featured: false,
+      position: 'Full Stack Engineer',
+      postedAt: new Date(2024, 2, 12),
+      contract: 'Full Time',
+      location: 'Worldwide',
+      role: 'Fullstack',
+      level: 'Midweight',
+      languages: ['JavaScript', 'Python', 'Django']
+    },
+    { 
+      id: 10,
+      image: '../../../assets/images/the-air-filter-company.svg',
+      company: 'The Air Filter Company',
+      new: false,
+      featured: false,
+      position: 'Front-end Dev',
+      postedAt: new Date(2024, 3, 6),
+      contract: 'Part Time',
+      location: 'Worldwide',
+      role: 'Frontend',
+      level: 'Junior',
+      languages: ['JavaScript', 'React', 'Sass']
+    }
+    
+  ];

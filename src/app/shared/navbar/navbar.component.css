@@ -4,4 +4,19 @@
     width: 100%;
     background-size: cover;
     height: 100px;  
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding-left: 20px;
+    padding-right: 20px;
+    overflow: visible;
+    margin-bottom: 50px;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        background-image: url('../../../assets/images/bg-header-mobile.svg'); 
+    }
 }

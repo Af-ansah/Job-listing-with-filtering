@@ -1,0 +1,38 @@
+<div class="card-container">
+   <div class="job-wrapper">
+      <img [src]="job.image" [alt]="job.company">
+      <div class="left-part">
+         
+         <div class="first-lane"> 
+            <p>{{ job.company }}</p>  
+            <app-button *ngIf="job.new" [variant]="'primary'" [buttonName]="'NEW!'" ></app-button> 
+            <app-button  *ngIf="job.featured" [variant]="'secondary'" [buttonName]="'FEATURED'"></app-button>
+         </div>
+   
+         <p>{{job.position}}</p>
+         
+         <div class="third-lane">
+            <p>{{ job.postedAt | timeAgo }}</p>
+            <div class="dot"></div>
+            <p>{{ job.contract }}</p>
+            <div class="dot"></div>
+            <p>{{ job.location }}</p>
+         </div>
+   
+      </div>
+   </div>
+   <div class="bar"></div>
+      
+   <div class="skills">
+      <app-button [variant]="'tertiary'" [buttonName]="job.role" (click)="addSkill(job.role)" > 
+      </app-button>
+      <app-button [variant]="'tertiary'" [buttonName]="job.level"  (click)="addSkill(job.level)">
+      </app-button>
+      <ng-container *ngFor="let language of job.languages">
+          <app-button [variant]="'tertiary'" [buttonName]="language"  (click)="addSkill(language)"> 
+         </app-button>
+      </ng-container>
+   </div> 
+    
+
+</div>
