@@ -18,11 +18,18 @@ export class CardComponent {
   @Input()
   job!: IJob;
 
-  @Output()
-  selectSkill = new EventEmitter<string>()
+  // @Output()
+  // selectSkill = new EventEmitter<string>()
 
- addSkill(skill:string){
-  this.selectSkill.emit(skill);
- }
 
+
+  @Output() selectFilter = new EventEmitter<{type:  'role' | 'level' | 'language', event: string}>();
+ 
+ 
+
+  addSkill(type:  'role' | 'level' | 'language', event: string) {
+  
+    this.selectFilter.emit({type, event});
+  }
 }
+ 

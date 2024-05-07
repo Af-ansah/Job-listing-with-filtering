@@ -31,9 +31,8 @@ export class AppComponent implements OnInit{
     this.jobs = this.dataService.jobsData
   }
   
-  addtoFilter(event: string){
-    // this.showfilterCard = true;
-    this.dataService.addingTofilter(event)
+  addtoFilter(filterData: {type:  'role' | 'level' | 'language', event: string}) {
+    this.dataService.addingTofilter(filterData.type, filterData.event);
     console.log(event, 'skill')
   }
 }

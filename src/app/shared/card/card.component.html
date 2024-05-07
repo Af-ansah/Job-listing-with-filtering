@@ -24,12 +24,12 @@
    <div class="bar"></div>
       
    <div class="skills">
-      <app-button [variant]="'tertiary'" [buttonName]="job.role" (click)="addSkill(job.role)" > 
+      <app-button [variant]="'tertiary'" [buttonName]="job.role" (click)="addSkill('role' , job.role)" > 
       </app-button>
-      <app-button [variant]="'tertiary'" [buttonName]="job.level"  (click)="addSkill(job.level)">
+      <app-button [variant]="'tertiary'" [buttonName]="job.level"  (click)="addSkill('level',job.level)">
       </app-button>
       <ng-container *ngFor="let language of job.languages">
-          <app-button [variant]="'tertiary'" [buttonName]="language"  (click)="addSkill(language)"> 
+          <app-button [variant]="'tertiary'" [buttonName]="language"  (click)="addSkill('language',language)"> 
          </app-button>
       </ng-container>
    </div> 
