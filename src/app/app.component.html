@@ -1,5 +1,5 @@
 <app-navbar></app-navbar>
 
 @for(job of jobs | async ; track job.id ){
-    <app-card [job]="job" (selectSkill)="addtoFilter($event)"></app-card>
+    <app-card [job]="job" (selectFilter)="addtoFilter( $event)"></app-card>
 }

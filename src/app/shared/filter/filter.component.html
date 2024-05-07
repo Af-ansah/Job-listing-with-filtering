@@ -1,13 +1,15 @@
-<div class="filter-card" >
+<div class="filter-card"  >
     <div class="filter-items">
-        <div *ngFor="let item of filterData | async" class="template">
-            @if(item !== '' ){
-                <span class="data-text">{{item}}</span>
-            <button class="image-btn">
-                <img src="../../../assets/images/icon-remove.svg" alt="close" class="close-icon">
-            </button>
-            }
-        </div>
+        @if(filterData() ){
+            <div *ngFor="let item of filterData()" class="template">
+                
+                    <span class="data-text">{{item}}</span>
+                    <button class="image-btn">
+                    <img src="../../../assets/images/icon-remove.svg" alt="close" class="close-icon">
+                    </button>
+                
+            </div>
+        }
     </div>
     <app-button [variant]="'filter'" [buttonName]="'Clear'" (click)="clearJobsFilter()"></app-button>
 </div>
