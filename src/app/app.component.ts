@@ -32,6 +32,7 @@ export class AppComponent implements OnInit{
   }
   
   addtoFilter(filterData: {type:  'role' | 'level' | 'language', event: string}) {
+    this.dataService.showFilter();
     this.dataService.addingTofilter(filterData.type, filterData.event);
     console.log(event, 'skill')
   }

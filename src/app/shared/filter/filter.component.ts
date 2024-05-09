@@ -15,19 +15,56 @@ import { toSignal } from '@angular/core/rxjs-interop';
 })
 export class FilterComponent  implements OnInit{
 
+
  
     filterData = toSignal(combineLatest([
       this.dataservice.roles,
       this.dataservice.levels,
       this.dataservice.languages
     ]).pipe(
-      map(([roles, levels, languages]) => [...roles, ...levels, ...languages]
+      map(([roles, levels, languages]) => {
+        const rolesValue:{
+          type: 'role' | 'level' | 'language',
+          filterValue: string
+          }[]= roles.map((role) =>{
+          return {
+            type: 'role',
+            filterValue: role
+          }
+        })
+        
+
+        const levelsValue:{
+          type: 'role' | 'level' | 'language',
+          filterValue: string
+          }[] = levels.map((level) =>{
+          return {
+            type: 'level',
+            filterValue: level
+          }
+        })
+        
+
+        const languagesValue :{
+          type: 'role' | 'level' | 'language',
+          filterValue: string
+          }[]= languages.map((language) =>{
+          return {
+            type: 'language',
+            filterValue: language
+          }
+        })
+        return [...rolesValue,...levelsValue,...languagesValue]
+
+
+      }
       ),catchError(
         error => {throw new Error(error)}
         
       ))
     );
-
+  isVisible = false;
+  type!: "role" | "level" | "language" ;
     
     //filterData = signal([])
   
@@ -44,6 +81,11 @@ export class FilterComponent  implements OnInit{
   clearJobsFilter(){
     this.dataservice.clearFilters();
     
+  }
+ 
+  //Method to remove filter
+  onRemoveFilter(type: 'role' | 'level' | 'language', item: string) {
+    this.dataservice.removeFilter(type, item);
   }
 
 }

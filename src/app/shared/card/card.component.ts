@@ -24,11 +24,9 @@ export class CardComponent {
 
 
   @Output() selectFilter = new EventEmitter<{type:  'role' | 'level' | 'language', event: string}>();
- 
- 
+  
 
   addSkill(type:  'role' | 'level' | 'language', event: string) {
-  
     this.selectFilter.emit({type, event});
   }
 }

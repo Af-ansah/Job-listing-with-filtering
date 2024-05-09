@@ -3,8 +3,8 @@
         @if(filterData() ){
             <div *ngFor="let item of filterData()" class="template">
                 
-                    <span class="data-text">{{item}}</span>
-                    <button class="image-btn">
+                    <span class="data-text">{{item.filterValue}}</span>
+                    <button class="image-btn" (click)="onRemoveFilter(item.type, item.filterValue)">
                     <img src="../../../assets/images/icon-remove.svg" alt="close" class="close-icon">
                     </button>
                 

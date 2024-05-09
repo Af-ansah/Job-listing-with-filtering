@@ -7,13 +7,14 @@ import { BehaviorSubject, Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class DataService {
-  
+ 
+
   
   private jobsSubject!: BehaviorSubject<IJob[]>;
   public jobsData!: Observable<IJob[]>;
 
-  // private visibility = new BehaviorSubject<boolean>(false);
-  // visibleSource = this.visibility.asObservable();
+  private visibility = new BehaviorSubject<boolean>(false);
+  visibleSource = this.visibility.asObservable();
  
 
   private roleFilterSubject: BehaviorSubject<string[]> = new BehaviorSubject(new Array)
@@ -31,13 +32,13 @@ export class DataService {
     this.jobsData =  this.jobsSubject.asObservable() 
 
   }
-  // showFilter(){
-  //   this.visibility.next(true);
-  // }
+  showFilter(){
+    this.visibility.next(true);
+  }
 
-  // hideFilter() {
-  //   this.visibility.next(false);
-  // }
+  hideFilter() {
+    this.visibility.next(false);
+  }
 
   addingTofilter(type:'role'|'level'|'language', event:string){
     const subjects = {
@@ -53,6 +54,23 @@ export class DataService {
      }
     
      
+  }
+
+
+  removeFilter(type: 'role' | 'level' | 'language', item: string) {
+    const subjects = {
+      'role': this.roleFilterSubject,
+      'level': this.levelFilterSubject,
+      'language': this.languageFilterSubject
+    };
+  
+    const subject = subjects[type];
+    
+    const filteredFilters = subject.value.filter(filter => filter !== item);
+
+    subject.next(filteredFilters);
+    this.filterJobsBySkill();
+    
   }
 
   private updateFilter(subject: BehaviorSubject<string[]>, value: string) {
