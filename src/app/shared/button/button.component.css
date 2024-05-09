@@ -46,3 +46,9 @@
     background-color: #FFF;
     
 }
+
+@media (max-width: 767px) {
+    .tertiary{
+        margin-bottom: 10px;
+    }
+}

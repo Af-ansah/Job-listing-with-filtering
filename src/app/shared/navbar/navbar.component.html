@@ -1,5 +1,7 @@
 <nav class="navbar">
-    <app-filter ></app-filter>
+    <div *ngIf="isVisible">
+        <app-filter ></app-filter>
+    </div>
 </nav>
 
 

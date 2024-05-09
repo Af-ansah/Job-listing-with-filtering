@@ -29,12 +29,19 @@
     padding: 0;
 }
 
- img {
+ /* img {
     display: flex;
     margin-right: 2px;
     flex-shrink: 0;
     height: auto;
 
+} */
+img {
+    display: block;      
+    width: 100%;         
+    height: auto;        
+    max-width: 100%;     
+    margin-right: 2px;   
 }
 
 .first-lane, .third-lane {
