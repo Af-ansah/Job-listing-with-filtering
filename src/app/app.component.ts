@@ -1,4 +1,4 @@
-import { Component, Injectable, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { CardComponent } from './shared/card/card.component';
@@ -21,11 +21,8 @@ import { AsyncPipe } from '@angular/common';
 })
 export class AppComponent implements OnInit{
   jobs!:Observable<IJob[]>
-  // showfilterCard = false;
 
-  constructor(private dataService: DataService){
-    
-  }
+  constructor(private dataService: DataService){}
 
   ngOnInit(): void {
     this.jobs = this.dataService.jobsData
@@ -34,6 +31,5 @@ export class AppComponent implements OnInit{
   addtoFilter(filterData: {type:  'role' | 'level' | 'language', event: string}) {
     this.dataService.showFilter();
     this.dataService.addingTofilter(filterData.type, filterData.event);
-    console.log(event, 'skill')
   }
 }

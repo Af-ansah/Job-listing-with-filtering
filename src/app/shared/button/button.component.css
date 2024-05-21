@@ -1,14 +1,17 @@
+ 
+ button {
+    cursor: pointer;
+ }
  .tertiary {
     border: none;
     color: #5CA5A5;
     border-radius: 3px;
-    cursor: pointer;
     background-color:  #EFFAFA;
     margin-right: 0.5rem;
     font-size: 12px;
     align-items: center;
     padding: 10px;
-    font: bold;   
+    font-weight: bold;   
 }
 
 .tertiary:hover {
@@ -42,7 +45,7 @@
     color: #5CA5A5;
     border: none;
     font-weight: bold;
-    margin-left: 0;
+    align-items: center;
     background-color: #FFF;
     
 }

@@ -16,7 +16,7 @@ export class DataService {
   private visibility = new BehaviorSubject<boolean>(false);
   visibleSource = this.visibility.asObservable();
  
-
+//hold an array of roles, levels and language  that should be fltered
   private roleFilterSubject: BehaviorSubject<string[]> = new BehaviorSubject(new Array)
   public roles = this.roleFilterSubject?.asObservable();
 
@@ -25,6 +25,7 @@ export class DataService {
 
   private languageFilterSubject: BehaviorSubject<string[]> = new BehaviorSubject(new Array)
   public languages = this.languageFilterSubject?.asObservable();
+  DataService: any;
 
   
   constructor() {
@@ -40,6 +41,7 @@ export class DataService {
     this.visibility.next(false);
   }
 
+    //checks to see if there are any filtered items in the various arrays
   addingTofilter(type:'role'|'level'|'language', event:string){
     const subjects = {
       'role': this.roleFilterSubject,
@@ -53,7 +55,6 @@ export class DataService {
       this.filterJobsBySkill()
      }
     
-     
   }
 
 
@@ -77,11 +78,11 @@ export class DataService {
     if (!subject.value.includes(value)) {
       subject.next([...subject.value, value]);
     }
-
-
   
   }
-  
+
+
+  //  display the job listing accordingly
   filterJobsBySkill(){
     let filteredJobs = jobs;
     if (this.roleFilterSubject.value.length) {
@@ -97,11 +98,7 @@ export class DataService {
   }
 
   
-
-  // public get jobs() {
-  //   return this.jobsSubject.value;
-  // }
-
+  // A methood to cleaar all there arrays of the filtered skills
   clearFilters() {
     this.roleFilterSubject.next([]);
     this.levelFilterSubject.next([]);

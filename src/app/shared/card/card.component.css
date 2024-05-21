@@ -2,12 +2,9 @@
  
     display: flex;
    justify-content: space-between;  
-    /* align-items: flex-start;  */
     background-color: white;
     margin: 4rem 5rem;
     padding: 20px 50px;
-    /* width: 75%; */
-    /* height: auto;  */
     border-radius: 6px;
     font-family: league Spartan, sans-serif;
     cursor: pointer;
@@ -29,13 +26,6 @@
     padding: 0;
 }
 
- /* img {
-    display: flex;
-    margin-right: 2px;
-    flex-shrink: 0;
-    height: auto;
-
-} */
 img {
     display: block;      
     width: auto; 
@@ -66,7 +56,6 @@ img {
     color: #B7C4C4;
     font-size: 0.8em;
     align-items: center;
-    /* justify-content: space-between; */
 }
 
 
@@ -77,28 +66,13 @@ img {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
    
 }
 
 
- /* .skill-btn {
-    border: none;
-    color: #5CA5A5;
-    border-radius: 3px;
-    cursor: pointer;
-    background-color:  #EFFAFA;
-    margin-right: 0.5rem;
-    font-size: 12px;
-    align-items: center;
-    padding: 10px;
-    font: bold;
-    
-}
 
-.skills .skill-btn:hover {
-    background-color: #5CA5A5;
-    color: #FFF; 
-} */
 
 
 .dot {
@@ -139,7 +113,7 @@ img {
     }
     
     .skills {
-        /* margin: rem 1rem; */
+       
         flex-wrap: wrap;
         justify-content: flex-start;
         align-items: flex-start;
