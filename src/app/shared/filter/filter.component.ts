@@ -2,7 +2,7 @@ import { Component, Input, OnInit, signal } from '@angular/core';
 import { ButtonComponent } from '../button/button.component';
 import { CommonModule } from '@angular/common';
 import { DataService } from '../../data.service';
-import { Observable, catchError, combineLatest, map } from 'rxjs';
+import {  catchError, combineLatest, map } from 'rxjs';
 import { toSignal } from '@angular/core/rxjs-interop';
 
 
@@ -63,18 +63,16 @@ export class FilterComponent  implements OnInit{
         
       ))
     );
+
   isVisible = false;
   type!: "role" | "level" | "language" ;
     
-    //filterData = signal([])
-  
   
  constructor(private dataservice: DataService) {}
 
   ngOnInit(): void {
     
   }
-  
   
 
   // Method to clear the array
